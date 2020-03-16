@@ -6,7 +6,6 @@ from time import sleep
 
 
 def get_html(url, useragent=None, proxy=None):
-    print('get_html')
     r = requests.get(url, headers=useragent, proxies=proxy)
     return r.text
 
@@ -27,8 +26,7 @@ def main():
     proxies = open('proxies.txt').read().split('\n')
 
     for i in range(20):
-        a = uniform(3, 6)
-        print(a)
+        a = uniform(1, 3)
         sleep(a)
 
         proxy = {'http': 'http://' + choice(proxies)}
